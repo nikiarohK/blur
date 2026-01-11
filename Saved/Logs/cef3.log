@@ -1,14 +1,8 @@
-[23596:23712:0111/232202.585:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[23596:8292:0111/232202.623:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
-[23596:23712:0111/232202.639:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[23596:23712:0111/232204.428:WARNING:external_registry_loader_win.cc(232)] Error observing HKLM: 5
-[16012:25368:0111/232204.877:WARNING:frame_impl.cc(430)] virtual CefFrameImpl::SendProcessMessage sent to detached frame 5-EB6174210C44AFB4D6D18366E18415E2 will be ignored
-[23596:23672:0111/232205.238:WARNING:browser_info.cc(345)] Returning a speculative frame for [7,9]
-[23596:23712:0111/232205.309:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[23596:23712:0111/232205.309:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[23596:23712:0111/232205.309:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[23596:23712:0111/232205.309:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[23596:23672:0111/232205.313:WARNING:browser_info.cc(345)] Returning a speculative frame for [8,9]
-[18676:2552:0111/232410.021:ERROR:shared_image_manager.cc(224)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
-[18676:2552:0111/232410.021:ERROR:shared_image_manager.cc(224)] SharedImageManager::ProduceSkia: Trying to Produce a Skia representation from a non-existent mailbox.
-[23596:23712:0112/003831.144:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[26304:528:0112/004029.784:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[26304:528:0112/004029.794:ERROR:os_crypt_win.cc(100)] Failed to decrypt: Ключ не может быть использован в указанном состоянии. (0x8009000B)
+[26304:528:0112/004029.835:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[5664:10004:0112/004033.309:ERROR:backend_impl.cc(989)] Critical error found -8
+[5664:10004:0112/004033.523:WARNING:storage_block-inl.h(138)] Failed data load.
+[5664:10004:0112/004033.523:WARNING:storage_block-inl.h(138)] Failed data load.
+[5664:10004:0112/004033.524:ERROR:entry_impl.cc(955)] Failed to save user data
+[26304:528:0112/005706.891:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
