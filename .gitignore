@@ -1,0 +1,37 @@
+# Unreal Engine Generated Files
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+*.sln
+*.suo
+*.opensdf
+*.sdf
+*.VC.db
+*.db
+*.opendb
+
+# Build results
+Debug/
+Release/
+x64/
+x86/
+[Bb]uild/
+[Bb]uilds/
+
+# Visual Studio
+.vs/
+*.VC.opendb
+
+# Rider
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Исключить все веб-кэши
+**/webcache_*/
+**/CEF3*/
