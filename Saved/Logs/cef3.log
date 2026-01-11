@@ -1,5 +1,4 @@
-[21864:21672:0111/204814.424:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[21864:21672:0111/204814.472:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[29860:32656:0111/204818.608:ERROR:backend_impl.cc(989)] Critical error found -8
-[29860:32656:0111/204818.828:WARNING:storage_block-inl.h(138)] Failed data load.
-[21864:21672:0111/205900.716:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[21500:33328:0111/224621.749:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[21500:33328:0111/224621.849:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[21500:33328:0111/224744.333:WARNING:page_discarding_helper.cc(138)] Discarding multiple pages with target (kb): 0
+[21500:33328:0111/225829.560:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
