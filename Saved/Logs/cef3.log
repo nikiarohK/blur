@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 [7328:15296:0112/045431.354:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
 [7328:15296:0112/045431.444:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
 [7328:31676:0112/050013.078:ERROR:cast_crl.cc(443)] CRL - Verification failed.
 [7328:15296:0112/054121.744:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+=======
+[1256:6716:0112/145935.934:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[1256:11860:0112/145935.968:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
+[1256:6716:0112/145935.989:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[1256:6716:0112/145938.913:WARNING:external_registry_loader_win.cc(232)] Error observing HKLM: 5
+[1256:6716:0112/145942.665:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+>>>>>>> c77cde71f1befc23e4fdced56d9c83b30f5ef78a
