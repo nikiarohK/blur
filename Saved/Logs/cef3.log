@@ -1,8 +1,4 @@
-[26304:528:0112/004029.784:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
-[26304:528:0112/004029.794:ERROR:os_crypt_win.cc(100)] Failed to decrypt: Ключ не может быть использован в указанном состоянии. (0x8009000B)
-[26304:528:0112/004029.835:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
-[5664:10004:0112/004033.309:ERROR:backend_impl.cc(989)] Critical error found -8
-[5664:10004:0112/004033.523:WARNING:storage_block-inl.h(138)] Failed data load.
-[5664:10004:0112/004033.523:WARNING:storage_block-inl.h(138)] Failed data load.
-[5664:10004:0112/004033.524:ERROR:entry_impl.cc(955)] Failed to save user data
-[26304:528:0112/005706.891:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
+[7328:15296:0112/045431.354:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[7328:15296:0112/045431.444:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[7328:31676:0112/050013.078:ERROR:cast_crl.cc(443)] CRL - Verification failed.
+[7328:15296:0112/054121.744:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
