@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 [24548:1124:0113/005930.862:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
 [24548:12384:0113/005930.904:ERROR:google_update_settings.cc(265)] Failed opening key Software\Chromium to set usagestats; result: 5
 [24548:1124:0113/005930.926:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
 [24548:1124:0113/005933.323:WARNING:alloy_constrained_window_views_client.cc(77)] No likely focused browser
 [24548:1124:0113/005933.334:WARNING:external_registry_loader_win.cc(232)] Error observing HKLM: 5
+=======
+[18636:18812:0112/223040.442:WARNING:chrome_main_delegate.cc(745)] This is Chrome version 128.0.6613.138 (not a warning)
+[18636:18812:0112/223040.581:WARNING:account_consistency_mode_manager.cc(77)] Desktop Identity Consistency cannot be enabled as no OAuth client ID and client secret have been configured.
+[18636:18812:0112/223043.686:WARNING:alloy_constrained_window_views_client.cc(77)] No likely focused browser
+>>>>>>> 3a6d9a6ad599a6ffd4c35edb6de33416a37e0481
