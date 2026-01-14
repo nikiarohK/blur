@@ -1,37 +1,58 @@
-# Unreal Engine Generated Files
+# ===========================================
+# Unreal Engine 5 - Core Generated Folders
+# ===========================================
 Binaries/
+DerivedDataCache/
 Intermediate/
 Saved/
-DerivedDataCache/
+Platforms/
+Build/
 *.sln
-*.suo
-*.opensdf
-*.sdf
-*.VC.db
-*.db
-*.opendb
+*.xcodeproj
+*.xcworkspace
 
-# Build results
-Debug/
-Release/
-x64/
-x86/
-[Bb]uild/
-[Bb]uilds/
+# ===========================================
+# Logs and Temporary Files
+# ===========================================
+*.log
+*.saved
+*.backup
+*.tmp
+*.temp
 
-# Visual Studio
+# ===========================================
+# Visual Studio/Rider
+# ===========================================
 .vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sdf
+*.opensdf
+*.opendb
+*.VC.db
 *.VC.opendb
 
-# Rider
-.idea/
-
-# macOS
+# ===========================================
+# OS Files
+# ===========================================
 .DS_Store
-
-# Windows
 Thumbs.db
+desktop.ini
 
-# Исключить все веб-кэши
-**/webcache_*/
-**/CEF3*/
+# ===========================================
+# ПРЕДОТВРАЩЕНИЕ ПРОБЛЕМ С Saved/
+# ===========================================
+# Явно игнорируем всё в Saved
+Saved/*
+!Saved/.gitkeep  # если нужен пустой файл для структуры
+
+# Браузер кэш и CEF
+Saved/webcache_*/
+Saved/CEF/
+Saved/Crashes/
+Saved/Config/CRASHREPORTER/
+Saved/Logs/
+Saved/Autosaves/
+Saved/Backup/
