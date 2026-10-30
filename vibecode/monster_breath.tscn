@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://drkiynf605lsw"]
 
 [ext_resource type="Script" uid="uid://cl8xd6q5327f" path="res://monster_breath.gd" id="1_8rk35"]
+[ext_resource type="Texture2D" uid="uid://c3pfe3aqlebn1" path="res://eaa348707a9f293125121da9423840ed.jpg" id="2_yi0w1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_bhunq"]
 font_size = 50
@@ -12,9 +13,16 @@ lifetime_max = 4.0
 metadata/_custom_type_script = "uid://bjmqnnss5ptsn"
 
 [node name="Label" type="Label" parent="." unique_id=136068863]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -31.0
+offset_top = 84.0
+offset_right = 1121.0
+offset_bottom = 732.0
 text = "душитель"
 label_settings = SubResource("LabelSettings_bhunq")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1458681485]
+position = Vector2(540.75, 222.74997)
+scale = Vector2(0.2806713, 0.28927368)
+texture = ExtResource("2_yi0w1")

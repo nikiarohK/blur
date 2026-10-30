@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dc3oeucp8xtuy"]
 
 [ext_resource type="Script" uid="uid://b2k0wvvswbcfp" path="res://monster_ears.gd" id="1_i1jf0"]
+[ext_resource type="Texture2D" uid="uid://cvjjcg4t41yjb" path="res://8440713d87c84ca7b743451626b6c316.jpg" id="2_vgsib"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_i1jf0"]
 font_size = 50
@@ -12,9 +13,16 @@ lifetime_max = 7.0
 metadata/_custom_type_script = "uid://bjmqnnss5ptsn"
 
 [node name="Label" type="Label" parent="." unique_id=238189092]
-offset_right = 1152.0
-offset_bottom = 648.0
+offset_left = -11.0
+offset_top = 126.0
+offset_right = 1141.0
+offset_bottom = 774.0
 text = "шептун"
 label_settings = SubResource("LabelSettings_i1jf0")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1331949273]
+position = Vector2(559, 242)
+scale = Vector2(0.47986108, 0.47986108)
+texture = ExtResource("2_vgsib")

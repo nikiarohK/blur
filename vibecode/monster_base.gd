@@ -40,7 +40,7 @@ func _process(delta: float) -> void:
 		return
 
 	var condition_met: bool = _is_condition_met()
-	visible = not condition_met
+	#visible = not condition_met
 
 	# Время жизни идёт всегда — защита от «вечного» монстра
 	lifetime_left -= delta
