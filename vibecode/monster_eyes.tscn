@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://p4pbn1jxr2j0"]
+
+[ext_resource type="Script" uid="uid://c2bap81x07wo8" path="res://monster_eyes.gd" id="1_rv5y4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rv5y4"]
+font_size = 50
+
+[node name="monster_eyes" type="Node2D" unique_id=375650026]
+script = ExtResource("1_rv5y4")
+lifetime_min = 4.0
+lifetime_max = 7.0
+metadata/_custom_type_script = "uid://bjmqnnss5ptsn"
+
+[node name="Label" type="Label" parent="." unique_id=814324248]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "глазастик"
+label_settings = SubResource("LabelSettings_rv5y4")
+horizontal_alignment = 1
+vertical_alignment = 1
