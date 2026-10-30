@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://q0ftnx4r3yrv"]
+
+[ext_resource type="PackedScene" uid="uid://be2n77qg01v26" path="res://campfire.tscn" id="1_ig7tw"]
+
+[node name="main" type="Node2D" unique_id=1303197236]
+
+[node name="Campfire" parent="." unique_id=1997081764 instance=ExtResource("1_ig7tw")]
+offset_left = 416.0
+offset_top = 573.0
+offset_right = 456.0
+offset_bottom = 613.0

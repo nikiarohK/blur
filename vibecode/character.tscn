@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bf1i1vp5hffw6"]
+
+[ext_resource type="Script" uid="uid://cslneyyfna38m" path="res://character.gd" id="1_glpr6"]
+
+[node name="Character" type="Node2D" unique_id=693689188]
+script = ExtResource("1_glpr6")
+decrease_air_per_second = 30.0
+
+[node name="air" type="ProgressBar" parent="." unique_id=658752398]
+offset_left = 410.0
+offset_top = 563.0
+offset_right = 728.0
+offset_bottom = 577.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="air" unique_id=2016406224]
+layout_mode = 0
+offset_left = 136.0
+offset_top = -6.0
+offset_right = 157.0
+offset_bottom = 17.0
+text = "air"
+
+[node name="Fire" type="ProgressBar" parent="." unique_id=1783013594]
+offset_left = 408.0
+offset_top = 578.0
+offset_right = 729.0
+offset_bottom = 596.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Fire" unique_id=2053869568]
+layout_mode = 0
+offset_left = 118.0
+offset_top = -3.0
+offset_right = 190.0
+offset_bottom = 20.0
+text = "Campfire"

@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://be2n77qg01v26"]
+
+[ext_resource type="Script" uid="uid://g3jok33ylsp" path="res://campfire.gd" id="1_oufq8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ig7tw"]
+
+[node name="Campfire" type="Control" unique_id=1997081764]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_oufq8")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=399633782]
+material = SubResource("CanvasItemMaterial_ig7tw")
+layout_mode = 0
+offset_right = 323.0
+offset_bottom = 36.0
+value = 100.0
+show_percentage = false
