@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dwpi6qu2nw5re"]
+
+[ext_resource type="Script" uid="uid://ya8yp0rlocu" path="res://death_screen.gd" id="1_ex68u"]
+[ext_resource type="Texture2D" uid="uid://bijiusoang3my" path="res://imagessssss.jpeg" id="1_if853"]
+
+[node name="Death_screen" type="Node2D" unique_id=289787515]
+script = ExtResource("1_ex68u")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1212257740]
+position = Vector2(572, 347)
+scale = Vector2(2.0185716, 2.0185714)
+texture = ExtResource("1_if853")
+
+[node name="Button" type="Button" parent="." unique_id=173762349]
+offset_left = 392.0
+offset_top = 515.0
+offset_right = 734.1091
+offset_bottom = 613.0
+text = "Restart
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

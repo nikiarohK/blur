@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bf1i1vp5hffw6"]
 
 [ext_resource type="Script" uid="uid://cslneyyfna38m" path="res://character.gd" id="1_glpr6"]
+[ext_resource type="Texture2D" uid="uid://bp23t63l0435c" path="res://Right_Hand_Palm.png" id="2_pjt0s"]
 
 [node name="Character" type="Node2D" unique_id=693689188]
 script = ExtResource("1_glpr6")
@@ -35,3 +36,11 @@ offset_top = -3.0
 offset_right = 190.0
 offset_bottom = 20.0
 text = "Campfire"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=631611168]
+visible = false
+top_level = true
+position = Vector2(553, 338.99997)
+rotation = -1.6283922
+scale = Vector2(0.27209833, 0.3219483)
+texture = ExtResource("2_pjt0s")

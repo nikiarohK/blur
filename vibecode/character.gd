@@ -25,6 +25,7 @@ extends Node2D
 
 @onready var air_bar: ProgressBar = $air
 @onready var fire_bar: ProgressBar = $Fire
+@onready var hand_sprite: Sprite2D = $Sprite2D
 
 var current_air: float = 100.0
 var current_fire: float = 100.0
@@ -56,6 +57,7 @@ func _ready() -> void:
 	_print_status()
 	_prev_eyes_closed = eyes_closed
 	_prev_ears_closed = ears_closed
+	hand_sprite.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	# --- 1) Отпускания всегда ---
@@ -101,11 +103,17 @@ func _process(delta: float) -> void:
 
 	current_fire = max(current_fire - fire_decrease_per_second * delta, 0.0)
 	fire_bar.value = current_fire
+	if fire_bar.value == 0.0:
+		_die()
 
 	if eyes_closed != _prev_eyes_closed or ears_closed != _prev_ears_closed:
 		_prev_eyes_closed = eyes_closed
 		_prev_ears_closed = ears_closed
 		_print_status()
+	if eyes_closed:
+		hand_sprite.visible = true
+	else:
+		hand_sprite.visible = false
 
 # --- Здоровье ---
 
@@ -126,6 +134,7 @@ func heal(amount: int) -> void:
 func _die() -> void:
 	is_dead = true
 	print("[HP] персонаж УМЕР")
+	get_tree().change_scene_to_file("res://death_screen.tscn")
 
 # --- Прочее ---
 
