@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bvyny0m24s7sj"]
+
+[ext_resource type="Script" uid="uid://bqeo1scst3dgm" path="res://win_screen.gd" id="1_wmwda"]
+[ext_resource type="Texture2D" uid="uid://c8gxl5o1nij28" path="res://win.jpeg" id="2_wmwda"]
+
+[node name="WinScreen" type="Node2D" unique_id=602392098]
+script = ExtResource("1_wmwda")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=529742515]
+position = Vector2(579.00006, 323.00003)
+scale = Vector2(2.0185716, 2.0185714)
+texture = ExtResource("2_wmwda")
+
+[node name="Button" type="Button" parent="." unique_id=1847014252]
+offset_left = 389.0
+offset_top = 486.0
+offset_right = 731.1091
+offset_bottom = 584.0
+text = "Restart
+"
+
+[node name="Button2" type="Button" parent="." unique_id=1039267878]
+offset_left = 390.0
+offset_top = 593.0
+offset_right = 733.0
+offset_bottom = 643.0
+text = "Menu
+"

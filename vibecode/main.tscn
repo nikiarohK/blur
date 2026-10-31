@@ -1,12 +1,50 @@
 [gd_scene format=3 uid="uid://q0ftnx4r3yrv"]
 
+[ext_resource type="Script" uid="uid://b3wict5gj0jfo" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://bf1i1vp5hffw6" path="res://character.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c1qp5qmuikl43" path="res://spawner.tscn" id="2_h2yge"]
+[ext_resource type="AudioStream" uid="uid://d3srmk68cmxow" path="res://AMBRurl_Campaign at night 3 (ID 1469)_BigSoundBank.com.ogg" id="3_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://dpjabfcilqply" path="res://FIREBurn_Big branching fire 2 (ID 0988)_BigSoundBank.com.ogg" id="4_lquwl"]
+
+[sub_resource type="FontVariation" id="FontVariation_kek77"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
+font = SubResource("FontVariation_kek77")
+font_size = 80
+font_color = Color(1, 0.58431375, 0.5137255, 1)
 
 [node name="main" type="Node2D" unique_id=1303197236]
+script = ExtResource("1_lquwl")
 
 [node name="Character" parent="." unique_id=693689188 instance=ExtResource("2_0xm2m")]
 position = Vector2(-11, 12)
 decrease_air_per_second = 25.0
 
 [node name="spawner" parent="." unique_id=1864842051 instance=ExtResource("2_h2yge")]
+first_spawn_delay = 5.0
+max_alive = 2
+
+[node name="ForestSFX" type="AudioStreamPlayer" parent="." unique_id=1681006105]
+stream = ExtResource("3_1bvp3")
+volume_db = -8.21
+bus = &"Sfx"
+
+[node name="FireSFX" type="AudioStreamPlayer" parent="." unique_id=496205509]
+stream = ExtResource("4_lquwl")
+volume_db = 7.298
+bus = &"Sfx"
+
+[node name="Timer" type="Timer" parent="." unique_id=1500790641]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="CountdownLabel" type="Label" parent="." unique_id=1365210630]
+offset_left = 1007.0
+offset_top = -2.0
+offset_right = 1144.0
+offset_bottom = 108.0
+text = "120"
+label_settings = SubResource("LabelSettings_lquwl")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -8,6 +8,7 @@ font_size = 50
 
 [node name="monster_breath" type="Node2D" unique_id=1091100134]
 script = ExtResource("1_8rk35")
+time_to_attack = 2.0
 lifetime_min = 2.0
 lifetime_max = 4.0
 metadata/_custom_type_script = "uid://bjmqnnss5ptsn"

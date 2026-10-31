@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Vibecode"
-run/main_scene="uid://q0ftnx4r3yrv"
+run/main_scene="uid://b3ajg8ly8px7n"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout="uid://ujpvyb84684n"
 
 [display]
 

@@ -4,3 +4,4 @@
 
 [node name="monster_base" type="Node2D" unique_id=414312922]
 script = ExtResource("1_6vfgd")
+time_to_attack = 2.0

@@ -7,16 +7,25 @@
 script = ExtResource("1_ex68u")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1212257740]
-position = Vector2(572, 347)
+position = Vector2(610.00006, 322)
 scale = Vector2(2.0185716, 2.0185714)
 texture = ExtResource("1_if853")
 
 [node name="Button" type="Button" parent="." unique_id=173762349]
-offset_left = 392.0
-offset_top = 515.0
-offset_right = 734.1091
-offset_bottom = 613.0
+offset_left = 389.0
+offset_top = 486.0
+offset_right = 731.1091
+offset_bottom = 584.0
 text = "Restart
 "
 
+[node name="Button2" type="Button" parent="." unique_id=1168677883]
+offset_left = 390.0
+offset_top = 593.0
+offset_right = 733.0
+offset_bottom = 643.0
+text = "Menu
+"
+
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

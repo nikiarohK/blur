@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://d3srmk68cmxow"
+path="res://.godot/imported/AMBRurl_Campaign at night 3 (ID 1469)_BigSoundBank.com.ogg-e77bba3360f2484289a182afc1c1071d.oggvorbisstr"
+
+[deps]
+
+source_file="res://AMBRurl_Campaign at night 3 (ID 1469)_BigSoundBank.com.ogg"
+dest_files=["res://.godot/imported/AMBRurl_Campaign at night 3 (ID 1469)_BigSoundBank.com.ogg-e77bba3360f2484289a182afc1c1071d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

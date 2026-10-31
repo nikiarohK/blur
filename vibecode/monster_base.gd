@@ -31,9 +31,9 @@ func _ready() -> void:
 	attack_time_left = time_to_attack
 	lifetime_left = randf_range(lifetime_min, lifetime_max)
 
-	print("[", monster_name(), "] появился. Условие: ", counter_name(),
-		" | атака через ", time_to_attack,
-		"с | исчезнет через ", snapped(lifetime_left, 0.1), "с")
+	#print("[", monster_name(), "] появился. Условие: ", counter_name(),
+		#" | атака через ", time_to_attack,
+		#"с | исчезнет через ", snapped(lifetime_left, 0.1), "с")
 
 func _process(delta: float) -> void:
 	if not is_active or not player:
@@ -45,7 +45,7 @@ func _process(delta: float) -> void:
 	# Время жизни идёт всегда — защита от «вечного» монстра
 	lifetime_left -= delta
 	if lifetime_left <= 0.0:
-		print("[", monster_name(), "] исчез по таймеру жизни")
+		#print("[", monster_name(), "] исчез по таймеру жизни")
 		_die()
 		return
 

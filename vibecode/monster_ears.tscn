@@ -8,6 +8,7 @@ font_size = 50
 
 [node name="monster_ears" type="Node2D" unique_id=1592749902]
 script = ExtResource("1_i1jf0")
+time_to_attack = 2.0
 lifetime_min = 4.0
 lifetime_max = 7.0
 metadata/_custom_type_script = "uid://bjmqnnss5ptsn"

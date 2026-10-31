@@ -1,6 +1,7 @@
 extends Node2D
 
 # --- Воздух---
+@export_group("Air")
 @export var action_hold_breath: StringName = &"action_hold_breath"
 @export var max_air_value: float = 100.0
 @export var increase_air_per_second: float = 10.0
@@ -23,10 +24,13 @@ extends Node2D
 @export_group("Health")
 @export var max_hp: int = 3
 
+
 @onready var air_bar: ProgressBar = $air
 @onready var fire_bar: ProgressBar = $Fire
 @onready var hand_sprite: Sprite2D = $Sprite2D
 
+
+var bus_idx = AudioServer.get_bus_index("Sfx")
 var current_air: float = 100.0
 var current_fire: float = 100.0
 var breath_holded: bool = false
@@ -67,6 +71,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		eyes_closed = false
 	if event.is_action_released(action_close_ears):
 		ears_closed = false
+		AudioServer.set_bus_volume_db(bus_idx, 0.0)
 
 	if is_dead:
 		return
@@ -82,6 +87,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		eyes_closed = true
 	if event.is_action_pressed(action_close_ears):
 		ears_closed = true
+		AudioServer.set_bus_volume_db(bus_idx, -50.0)
 
 	# --- 4) fire — только если ни одно из трёх не удерживается ---
 	if event.is_action_pressed(action_add_fire):

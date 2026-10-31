@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dpjabfcilqply"
+path="res://.godot/imported/FIREBurn_Big branching fire 2 (ID 0988)_BigSoundBank.com.ogg-0dbb68e81453a6aa46a487c9099276ff.oggvorbisstr"
+
+[deps]
+
+source_file="res://FIREBurn_Big branching fire 2 (ID 0988)_BigSoundBank.com.ogg"
+dest_files=["res://.godot/imported/FIREBurn_Big branching fire 2 (ID 0988)_BigSoundBank.com.ogg-0dbb68e81453a6aa46a487c9099276ff.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

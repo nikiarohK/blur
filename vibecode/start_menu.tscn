@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://b3ajg8ly8px7n"]
+
+[ext_resource type="Script" uid="uid://ch238hqm2ct1y" path="res://start_menu.gd" id="1_jwbto"]
+[ext_resource type="Texture2D" uid="uid://bo4468anuf0ke" path="res://imaasdasdasdages.jpeg" id="2_ia0g5"]
+
+[node name="start_menu" type="Node2D" unique_id=1772827959]
+script = ExtResource("1_jwbto")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1421065988]
+position = Vector2(588.7499, 325.5)
+scale = Vector2(2.3035362, 1.6556122)
+texture = ExtResource("2_ia0g5")
+
+[node name="StartButton" type="Button" parent="." unique_id=1005615883]
+offset_left = 434.0
+offset_top = 462.0
+offset_right = 705.0
+offset_bottom = 519.0
+text = "Start
+"
+
+[node name="ExitButton" type="Button" parent="." unique_id=907270934]
+offset_left = 434.0
+offset_top = 545.0
+offset_right = 704.0
+offset_bottom = 600.0
+text = "Exit
+"
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

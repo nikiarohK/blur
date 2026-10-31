@@ -6,6 +6,7 @@
 [node name="Character" type="Node2D" unique_id=693689188]
 script = ExtResource("1_glpr6")
 decrease_air_per_second = 30.0
+fire_increase_on_press = 20.0
 
 [node name="air" type="ProgressBar" parent="." unique_id=658752398]
 offset_left = 410.0
