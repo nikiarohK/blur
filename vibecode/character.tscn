@@ -2,13 +2,16 @@
 
 [ext_resource type="Script" uid="uid://cslneyyfna38m" path="res://character.gd" id="1_glpr6"]
 [ext_resource type="Texture2D" uid="uid://bp23t63l0435c" path="res://Right_Hand_Palm.png" id="2_pjt0s"]
+[ext_resource type="Texture2D" uid="uid://bybgbyhii2pqw" path="res://426-4261778_blood-on-screen-png-blood-frame-png.png" id="3_wa5vi"]
 
 [node name="Character" type="Node2D" unique_id=693689188]
 script = ExtResource("1_glpr6")
 decrease_air_per_second = 30.0
 fire_increase_on_press = 20.0
+blood_alpha_at_full_hp = 0.0
 
 [node name="air" type="ProgressBar" parent="." unique_id=658752398]
+top_level = true
 offset_left = 410.0
 offset_top = 563.0
 offset_right = 728.0
@@ -24,6 +27,7 @@ offset_bottom = 17.0
 text = "air"
 
 [node name="Fire" type="ProgressBar" parent="." unique_id=1783013594]
+top_level = true
 offset_left = 408.0
 offset_top = 578.0
 offset_right = 729.0
@@ -45,3 +49,9 @@ position = Vector2(553, 338.99997)
 rotation = -1.6283922
 scale = Vector2(0.27209833, 0.3219483)
 texture = ExtResource("2_pjt0s")
+
+[node name="blood_sprite" type="Sprite2D" parent="." unique_id=2143494830]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(587.24994, 317.49997)
+scale = Vector2(1.5043749, 1.145)
+texture = ExtResource("3_wa5vi")

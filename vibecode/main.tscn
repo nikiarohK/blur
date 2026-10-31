@@ -21,6 +21,7 @@ position = Vector2(-11, 12)
 decrease_air_per_second = 25.0
 
 [node name="spawner" parent="." unique_id=1864842051 instance=ExtResource("2_h2yge")]
+spawn_area = Rect2(-400, -300, 600, 400)
 first_spawn_delay = 5.0
 max_alive = 2
 

@@ -23,12 +23,16 @@ extends Node2D
 # --- Здоровье ---
 @export_group("Health")
 @export var max_hp: int = 3
+# ДОБАВЛЕНО: настраиваемая прозрачность blood_sprite в зависимости от HP.
+@export_range(0.0, 1.0) var blood_alpha_at_full_hp: float = 0.05   # почти невидим при полном HP
+@export_range(0.0, 1.0) var blood_alpha_at_zero_hp: float = 1.0    # полностью виден при 0 HP
+@export var blood_fade_duration: float = 0.25                       # длительность плавного перехода
 
 
 @onready var air_bar: ProgressBar = $air
 @onready var fire_bar: ProgressBar = $Fire
 @onready var hand_sprite: Sprite2D = $Sprite2D
-
+@onready var blood_sprite: Sprite2D = $blood_sprite
 
 var bus_idx = AudioServer.get_bus_index("Sfx")
 var current_air: float = 100.0
@@ -45,8 +49,14 @@ var fire_cooldown_timer: float = 0.0
 var _prev_eyes_closed: bool = false
 var _prev_ears_closed: bool = false
 
+# tween для плавного проявления blood_sprite
+var _blood_tween: Tween
+
 func _ready() -> void:
-	add_to_group("player")  # чтобы монстры находили игрока
+	add_to_group("player")
+
+	current_hp = max_hp
+	update_sprite_opacity(false)
 
 	air_bar.max_value = max_air_value
 	air_bar.min_value = 0.0
@@ -56,7 +66,6 @@ func _ready() -> void:
 	fire_bar.min_value = 0.0
 	fire_bar.value = current_fire
 
-	current_hp = max_hp
 	print("[HP] старт — ", current_hp, "/", max_hp)
 	_print_status()
 	_prev_eyes_closed = eyes_closed
@@ -64,7 +73,7 @@ func _ready() -> void:
 	hand_sprite.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	# --- 1) Отпускания всегда ---
+	# --- Отпускания всегда ---
 	if event.is_action_released(action_hold_breath):
 		breath_holded = false
 	if event.is_action_released(action_close_eyes):
@@ -76,11 +85,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if is_dead:
 		return
 
-	# --- 2) Кулдаун огня блокирует всё ---
+	# --- Кулдаун огня блокирует всё ---
 	if fire_cooldown_timer > 0.0:
 		return
 
-	# --- 3) air / eyes / ears — можно жать в любом сочетании ---
+	# --- air / eyes / ears — можно жать в любом сочетании ---
 	if event.is_action_pressed(action_hold_breath):
 		breath_holded = true
 	if event.is_action_pressed(action_close_eyes):
@@ -89,7 +98,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		ears_closed = true
 		AudioServer.set_bus_volume_db(bus_idx, -50.0)
 
-	# --- 4) fire — только если ни одно из трёх не удерживается ---
+	# --- fire — только если ни одно из трёх не удерживается ---
 	if event.is_action_pressed(action_add_fire):
 		if breath_holded or eyes_closed or ears_closed:
 			return
@@ -109,25 +118,23 @@ func _process(delta: float) -> void:
 
 	current_fire = max(current_fire - fire_decrease_per_second * delta, 0.0)
 	fire_bar.value = current_fire
-	if fire_bar.value == 0.0:
+	# защита от повторного вызова _die() до смены сцены
+	if fire_bar.value == 0.0 and not is_dead:
 		_die()
 
 	if eyes_closed != _prev_eyes_closed or ears_closed != _prev_ears_closed:
 		_prev_eyes_closed = eyes_closed
 		_prev_ears_closed = ears_closed
 		_print_status()
-	if eyes_closed:
-		hand_sprite.visible = true
-	else:
-		hand_sprite.visible = false
+	hand_sprite.visible = eyes_closed
 
 # --- Здоровье ---
-
 func take_damage(amount: int) -> void:
 	if amount <= 0 or is_dead:
 		return
 	current_hp = max(current_hp - amount, 0)
 	print("[HP] получено ", amount, " урона → ", current_hp, "/", max_hp)
+	update_sprite_opacity(true)   # плавное проявление
 	if current_hp <= 0:
 		_die()
 
@@ -136,15 +143,36 @@ func heal(amount: int) -> void:
 		return
 	current_hp = min(current_hp + amount, max_hp)
 	print("[HP] вылечено ", amount, " → ", current_hp, "/", max_hp)
+	update_sprite_opacity(true)   # при лечении спрайт снова бледнеет
 
 func _die() -> void:
+	# защита от повторного вызова
+	if is_dead:
+		return
 	is_dead = true
 	print("[HP] персонаж УМЕР")
 	get_tree().change_scene_to_file("res://death_screen.tscn")
 
 # --- Прочее ---
-
 func _print_status() -> void:
 	var eyes_str: String = "Глаза: ЗАКРЫТЫ" if eyes_closed else "Глаза: открыты"
 	var ears_str: String = "Уши: ЗАКРЫТЫ" if ears_closed else "Уши: открыты"
 	print(eyes_str, " | ", ears_str)
+
+func update_sprite_opacity(animated: bool = false) -> void:
+	# hp_ratio: 1.0 при полном HP → 0.0 при нулевом
+	var hp_ratio: float = float(current_hp) / float(max_hp)
+	# damage_ratio: 0.0 при полном HP → 1.0 при нулевом
+	var damage_ratio: float = 1.0 - hp_ratio
+	var target_alpha: float = lerp(blood_alpha_at_full_hp, blood_alpha_at_zero_hp, damage_ratio)
+
+	if not animated:
+		if _blood_tween and _blood_tween.is_valid():
+			_blood_tween.kill()
+		blood_sprite.modulate.a = target_alpha
+		return
+
+	if _blood_tween and _blood_tween.is_valid():
+		_blood_tween.kill()
+	_blood_tween = create_tween()
+	_blood_tween.tween_property(blood_sprite, "modulate:a", target_alpha, blood_fade_duration)
