@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://dwpi6qu2nw5re"]
 
 [ext_resource type="Script" uid="uid://ya8yp0rlocu" path="res://death_screen.gd" id="1_ex68u"]
-[ext_resource type="Texture2D" uid="uid://bijiusoang3my" path="res://imagessssss.jpeg" id="1_if853"]
+[ext_resource type="Texture2D" uid="uid://cvj01u03keumm" path="res://CampfireOff.png" id="2_ex68u"]
 
 [node name="Death_screen" type="Node2D" unique_id=289787515]
 script = ExtResource("1_ex68u")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1212257740]
-position = Vector2(575.00006, 332.00003)
-scale = Vector2(2.0185716, 2.0185714)
-texture = ExtResource("1_if853")
+position = Vector2(563, 422)
+scale = Vector2(8.5, 8.5)
+texture = ExtResource("2_ex68u")
 
 [node name="Button" type="Button" parent="." unique_id=173762349]
 offset_left = 389.0
-offset_top = 486.0
+offset_top = 518.0
 offset_right = 731.1091
 offset_bottom = 584.0
 text = "Restart

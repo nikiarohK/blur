@@ -4,80 +4,167 @@
 [ext_resource type="Texture2D" uid="uid://bp23t63l0435c" path="res://Right_Hand_Palm.png" id="2_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://bybgbyhii2pqw" path="res://426-4261778_blood-on-screen-png-blood-frame-png.png" id="3_wa5vi"]
 [ext_resource type="Texture2D" uid="uid://igr03myivppy" path="res://Campfires.png" id="4_wfnr8"]
+[ext_resource type="Texture2D" uid="uid://bab1vqmu7m7b4" path="res://Campfire2.png" id="5_px5sl"]
+[ext_resource type="Texture2D" uid="uid://cxauee82w0blu" path="res://Campfire3.png" id="6_0qfo5"]
+[ext_resource type="Texture2D" uid="uid://cakti5hkbij7g" path="res://Campfire4.png" id="7_yxww1"]
+[ext_resource type="Texture2D" uid="uid://cvj01u03keumm" path="res://CampfireOff.png" id="8_wdpcj"]
+[ext_resource type="Texture2D" uid="uid://cjp574xgsn5gv" path="res://lungBG.png" id="9_jb3kq"]
+[ext_resource type="Texture2D" uid="uid://dgk4xb0epe1ep" path="res://lungTop.png" id="10_c1b4b"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_px5sl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjduu"]
+atlas = ExtResource("8_wdpcj")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdpcj"]
+atlas = ExtResource("7_yxww1")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi5as"]
+atlas = ExtResource("7_yxww1")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb3kq"]
+atlas = ExtResource("7_yxww1")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c1b4b"]
+atlas = ExtResource("7_yxww1")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tnxx"]
+atlas = ExtResource("6_0qfo5")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwfjh"]
+atlas = ExtResource("6_0qfo5")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x1sy7"]
+atlas = ExtResource("6_0qfo5")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sm1rv"]
+atlas = ExtResource("6_0qfo5")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jx0ln"]
+atlas = ExtResource("5_px5sl")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpiy1"]
+atlas = ExtResource("5_px5sl")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88tkl"]
+atlas = ExtResource("5_px5sl")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0ipg"]
+atlas = ExtResource("5_px5sl")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3d8aq"]
 atlas = ExtResource("4_wfnr8")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0qfo5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i6g0"]
 atlas = ExtResource("4_wfnr8")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yxww1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5wlx"]
 atlas = ExtResource("4_wfnr8")
 region = Rect2(64, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wdpcj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r1pa"]
 atlas = ExtResource("4_wfnr8")
 region = Rect2(96, 0, 32, 32)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_b1lj4"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_wi6ju"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_px5sl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0qfo5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yxww1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wdpcj")
+"texture": SubResource("AtlasTexture_kjduu")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"fire_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdpcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi5as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jb3kq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c1b4b")
+}],
+"loop": 1,
+"name": &"fire_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7tnxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwfjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x1sy7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sm1rv")
+}],
+"loop": 1,
+"name": &"fire_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jx0ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpiy1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88tkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0ipg")
+}],
+"loop": 1,
+"name": &"fire_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3d8aq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i6g0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5wlx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r1pa")
+}],
+"loop": 1,
+"name": &"fire_5",
 "speed": 5.0
 }]
 
 [node name="Character" type="Node2D" unique_id=693689188]
 script = ExtResource("1_glpr6")
 decrease_air_per_second = 30.0
+air_damage_interval = 0.7
+fire_decrease_per_second = 4.0
 fire_increase_on_press = 20.0
 blood_alpha_at_full_hp = 0.0
-
-[node name="air" type="ProgressBar" parent="." unique_id=658752398]
-top_level = true
-offset_left = 410.0
-offset_top = 563.0
-offset_right = 728.0
-offset_bottom = 577.0
-show_percentage = false
-
-[node name="Label" type="Label" parent="air" unique_id=2016406224]
-layout_mode = 0
-offset_left = 136.0
-offset_top = -6.0
-offset_right = 157.0
-offset_bottom = 17.0
-text = "air"
-
-[node name="Fire" type="ProgressBar" parent="." unique_id=1783013594]
-top_level = true
-offset_left = 408.0
-offset_top = 578.0
-offset_right = 729.0
-offset_bottom = 596.0
-show_percentage = false
-
-[node name="Label" type="Label" parent="Fire" unique_id=2053869568]
-layout_mode = 0
-offset_left = 118.0
-offset_top = -3.0
-offset_right = 190.0
-offset_bottom = 20.0
-text = "Campfire"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=631611168]
 visible = false
@@ -93,8 +180,21 @@ position = Vector2(587.24994, 317.49997)
 scale = Vector2(1.5043749, 1.145)
 texture = ExtResource("3_wa5vi")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=264985807]
-position = Vector2(563, 422)
-scale = Vector2(8.484375, 8.484375)
-sprite_frames = SubResource("SpriteFrames_b1lj4")
-autoplay = "default"
+[node name="FireVisual" type="AnimatedSprite2D" parent="." unique_id=1521823444]
+position = Vector2(560.00006, 500)
+scale = Vector2(8.5, 8.5)
+sprite_frames = SubResource("SpriteFrames_wi6ju")
+animation = &"fire_5"
+autoplay = "fire_5"
+
+[node name="air" type="TextureProgressBar" parent="." unique_id=1909274357]
+modulate = Color(1, 1, 1, 0.4117647)
+offset_left = 556.0
+offset_top = 27.0
+offset_right = 590.0
+offset_bottom = 59.0
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2.5, 2.5)
+fill_mode = 3
+texture_under = ExtResource("9_jb3kq")
+texture_progress = ExtResource("10_c1b4b")

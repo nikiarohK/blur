@@ -5,13 +5,13 @@
 [ext_resource type="PackedScene" uid="uid://c1qp5qmuikl43" path="res://spawner.tscn" id="2_h2yge"]
 [ext_resource type="AudioStream" uid="uid://d3srmk68cmxow" path="res://AMBRurl_Campaign at night 3 (ID 1469)_BigSoundBank.com.ogg" id="3_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://dpjabfcilqply" path="res://FIREBurn_Big branching fire 2 (ID 0988)_BigSoundBank.com.ogg" id="4_lquwl"]
-
-[sub_resource type="FontVariation" id="FontVariation_kek77"]
+[ext_resource type="FontFile" uid="uid://c5wj0v262fh0x" path="res://7pxMONOkeychain.ttf" id="6_7mycd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lquwl"]
-font = SubResource("FontVariation_kek77")
-font_size = 80
-font_color = Color(1, 0.58431375, 0.5137255, 1)
+line_spacing = 10.0
+font = ExtResource("6_7mycd")
+font_size = 109
+outline_size = 1
 
 [node name="main" type="Node2D" unique_id=1303197236]
 script = ExtResource("1_lquwl")
@@ -41,10 +41,10 @@ one_shot = true
 autostart = true
 
 [node name="CountdownLabel" type="Label" parent="." unique_id=1365210630]
-offset_left = 1007.0
-offset_top = -2.0
-offset_right = 1144.0
-offset_bottom = 108.0
+offset_left = 986.0
+offset_top = -1.0
+offset_right = 1128.0
+offset_bottom = 85.0
 text = "120"
 label_settings = SubResource("LabelSettings_lquwl")
 
