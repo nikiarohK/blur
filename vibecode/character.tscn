@@ -3,6 +3,43 @@
 [ext_resource type="Script" uid="uid://cslneyyfna38m" path="res://character.gd" id="1_glpr6"]
 [ext_resource type="Texture2D" uid="uid://bp23t63l0435c" path="res://Right_Hand_Palm.png" id="2_pjt0s"]
 [ext_resource type="Texture2D" uid="uid://bybgbyhii2pqw" path="res://426-4261778_blood-on-screen-png-blood-frame-png.png" id="3_wa5vi"]
+[ext_resource type="Texture2D" uid="uid://igr03myivppy" path="res://Campfires.png" id="4_wfnr8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px5sl"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qfo5"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxww1"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdpcj"]
+atlas = ExtResource("4_wfnr8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b1lj4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px5sl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qfo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxww1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wdpcj")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Character" type="Node2D" unique_id=693689188]
 script = ExtResource("1_glpr6")
@@ -55,3 +92,9 @@ modulate = Color(1, 1, 1, 0)
 position = Vector2(587.24994, 317.49997)
 scale = Vector2(1.5043749, 1.145)
 texture = ExtResource("3_wa5vi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=264985807]
+position = Vector2(563, 422)
+scale = Vector2(8.484375, 8.484375)
+sprite_frames = SubResource("SpriteFrames_b1lj4")
+autoplay = "default"
